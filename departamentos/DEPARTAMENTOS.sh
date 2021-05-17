@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 for f in *.shp
 do
@@ -7,5 +7,5 @@ done
 
 for f in *.sql
 do
-    psql -U dubgcc -d cartografia_peru -f $f
+    psql -U debugcc -d cartografia_peru -f $f
 done

@@ -18,3 +18,8 @@ Limite departamental, provincial y distrital del Peru. Usando postgis, php y goo
 7. En tu explorador entrar a la url <b>localhost</b>. Como los datos son bastantes demorara un poco en cargar segun la velocidad de tu computador
 
 8. Si pondras en produccion el proyecto cambia el <b>apikey de googlemaps</b> en el archivo <b>index.php</b> en la linea <b>264</b>
+
+Si usas docker ejecuta:
+```
+docker-compose up
+```

@@ -6,7 +6,7 @@
   $lat = $_POST['lat'];
   $lng = $_POST['lng'];
 
-  $db = pg_connect("host=localhost port=5432 user=dubgcc password=root dbname=cartografia_peru");
+  $db = pg_connect("host=postgis port=5432 user=debugcc password=root dbname=cartografia_peru");
 
   /// consulta para obtener PROVINCIAS
   if ($level == "departamentos") {

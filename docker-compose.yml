@@ -1,0 +1,34 @@
+version: "3"
+services:
+  postgis:
+    build:
+      context: .
+      dockerfile: docker/postgis/Dockerfile
+    environment:
+     - POSTGRES_USER=debugcc
+     - POSTGRES_PASSWORD=root
+     - POSTGRES_DB=cartografia_peru
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  php:
+    build:
+      context: docker/php
+      dockerfile: Dockerfile
+    volumes:
+      - ./web:/var/www/html
+    depends_on:
+      - postgis
+  httpd:
+    build:
+      context: docker/httpd
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - php

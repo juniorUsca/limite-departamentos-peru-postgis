@@ -3,7 +3,7 @@
 ini_set('memory_limit', '512M');
 ini_set('max_execution_time', '180');
 
-  $db = pg_connect("host=localhost port=5432 user=dubgcc password=root dbname=cartografia_peru");
+  $db = pg_connect("host=postgis port=5432 user=debugcc password=root dbname=cartografia_peru");
   
   $query = "
     SELECT 
